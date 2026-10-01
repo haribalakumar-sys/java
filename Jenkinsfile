@@ -17,7 +17,7 @@ pipeline {
 
         stage('Run') {
             steps {
-                bat 'java Addition'
+                bat 'java adds'
             }
         }
     }
