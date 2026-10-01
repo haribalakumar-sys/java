@@ -5,40 +5,20 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                echo 'Checking out source code...'
                 checkout scm
             }
         }
 
-        stage('Compile') {
+        stage('Build') {
             steps {
-                echo 'Compiling Java code...'
                 bat 'javac Addition.java'
             }
         }
 
         stage('Run') {
             steps {
-                echo 'Running Java program...'
                 bat 'java Addition'
             }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Testing Addition program...'
-                bat 'java Addition'
-            }
-        }
-    }
-
-    post {
-        success {
-            echo 'Build and execution successful!'
-        }
-
-        failure {
-            echo 'Build failed!'
         }
     }
 }
