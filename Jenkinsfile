@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    {
         
     stages {
 
@@ -21,6 +20,5 @@ pipeline {
                 bat 'java mul'
             }
         }
-    }
     }
 }
