@@ -11,13 +11,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'javac adds.java'
+                bat 'javac mul.java'
             }
         }
 
         stage('Run') {
             steps {
-                bat 'java adds'
+                bat 'java mul'
             }
         }
     }
